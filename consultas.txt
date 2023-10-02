@@ -1,3 +1,804 @@
+SELECT * FROM SalesLT.Product;
+
+ProductID | ProductName | UnitPrice | CategoryID
+----------+-------------+----------+-----------
+1          | Chai | 18.00 | 1
+2          | Chang | 19.00 | 1
+3          | Aniseed Syrup | 10.00 | 2
+4          | Chef Anton's Cajun Seasoning | 22.00 | 2
+5          | Chef Anton's Gumbo Mix | 21.35 | 2
+6          | Grandma's Boysenberry Spread | 25.00 | 2
+7          | Uncle Bob's Organic Dried Pears | 30.00 | 2
+8          | Northwoods Cranberry Sauce | 40.00 | 2
+9          | Vermont Teddy Bear | 23.00 | 2
+10         | Boston Crab Meat | 21.00 | 3
+11         | Green Tea | 15.00 | 1
+12         | Chai Tea Bags | 18.00 | 1
+13         | Darjeeling Tea | 19.00 | 1
+14         | Earl Grey Tea | 19.00 | 1
+15         | English Breakfast Tea | 19.00 | 1
+16         | Irish Breakfast Tea | 19.00 | 1
+17         | Lipton Tea | 18.00 | 1
+18         | Earl Grey Tea Bags | 19.00 | 1
+19         | English Breakfast Tea Bags | 19.00 | 1
+20         | Darjeeling Tea Bags | 19.00 | 1
+21         | Green Tea Bags | 15.00 | 1
+22         | Java Coffee | 17.00 | 4
+23         | Kona Coffee | 18.00 | 4
+24         | Colombian Coffee | 16.00 | 4
+25         | French Roast Coffee | 17.00 | 4
+26         | Espresso Coffee | 18.00 | 4
+27         | Decaf Coffee | 15.00 | 4
+28         | Colombian Decaf Coffee | 16.00 | 4
+29         | French Roast Decaf Coffee | 17.00 | 4
+30         | Espresso Decaf Coffee | 18.00 | 4
+31         | Jamaican Coffee | 19.00 | 4
+32         | Sumatran Coffee | 18.00 | 4
+33         | Hazelnut Coffee | 17.00 | 4
+34         | Amaretto Coffee | 18.00 | 4
+35         | Raspberry Coffee | 19.00 | 4
+36         | Chocolate Coffee | 18.00 | 4
+37         | Vanilla Coffee | 17.00 | 4
+38         | Amaretto Coffee Liqueur | 18.00 | 5
+39         | Chocolate Liqueur | 19.00 | 5
+40         | Coffee Liqueur | 18.00 | 5
+
+
+SELECT Name, StandardCost, ListPrice FROM SalesLT.Product
+
+Name      | StandardCost | ListPrice
+----------+--------------+----------
+Chai       | 9.00        | 18.00
+Chang      | 10.00        | 19.00
+Aniseed Syrup | 5.00        | 10.00
+Chef Anton's Cajun Seasoning | 11.00        | 22.00
+Chef Anton's Gumbo Mix | 10.68        | 21.35
+Grandma's Boysenberry Spread | 12.50        | 25.00
+Uncle Bob's Organic Dried Pears | 15.00        | 30.00
+Northwoods Cranberry Sauce | 20.00        | 40.00
+Vermont Teddy Bear | 11.50        | 23.00
+Boston Crab Meat | 10.50        | 21.00
+Green Tea | 7.50        | 15.00
+Chai Tea Bags | 9.00        | 18.00
+Darjeeling Tea | 10.00        | 19.00
+Earl Grey Tea | 10.00        | 19.00
+English Breakfast Tea | 10.00        | 19.00
+Irish Breakfast Tea | 10.00        | 19.00
+Lipton Tea | 9.00        | 18.00
+Earl Grey Tea Bags | 10.00        | 19.00
+English Breakfast Tea Bags | 10.00        | 19.00
+Darjeeling Tea Bags | 10.00        | 19.00
+Green Tea Bags | 7.50        | 15.00
+Java Coffee | 8.50        | 17.00
+Kona Coffee | 9.00        | 18.00
+Colombian Coffee | 8.00        | 16.00
+French Roast Coffee | 8.50        | 17.00
+Espresso Coffee | 9.00        | 18.00
+Decaf Coffee | 7.50        | 15.00
+Colombian Decaf Coffee | 8.00        | 16.00
+French Roast Decaf Coffee | 8.50        | 17.00
+Espresso Decaf Coffee | 9.00        | 18.00
+Jamaican Coffee | 9.50        | 19.00
+Sumatran Coffee | 9.00        | 18.00
+Hazelnut Coffee | 8.50        | 17.00
+Amaretto Coffee | 9.00        | 18.00
+Raspberry Coffee | 9.50        | 19.00
+Chocolate Coffee | 9.00        | 18.00
+Vanilla Coffee | 8.50        | 17.00
+Amaretto Coffee Liqueur | 9.00        | 18.00
+Chocolate Liqueur | 10.00        | 19.00
+Coffee Liqueur | 9.00        | 18.00
+
+SELECT Name, ListPrice - StandardCost FROM SalesLT.Product
+
+Name      | ListPrice - StandardCost
+----------+--------------+----------
+Chai       | 9.00
+Chang      | 9.00
+Aniseed Syrup | 5.00
+Chef Anton's Cajun Seasoning | 11.00
+Chef Anton's Gumbo Mix | 10.67
+Grandma's Boysenberry Spread | 12.50
+Uncle Bob's Organic Dried Pears | 15.00
+Northwoods Cranberry Sauce | 20.00
+Vermont Teddy Bear | 11.50
+Boston Crab Meat | 10.50
+Green Tea | 7.50
+Chai Tea Bags | 9.00
+Darjeeling Tea | 10.00
+Earl Grey Tea | 10.00
+English Breakfast Tea | 10.00
+Irish Breakfast Tea | 10.00
+Lipton Tea | 9.00
+Earl Grey Tea Bags | 10.00
+English Breakfast Tea Bags | 10.00
+Darjeeling Tea Bags | 10.00
+Green Tea Bags | 7.50
+Java Coffee | 8.50
+Kona Coffee | 9.00
+Colombian Coffee | 8.00
+French Roast Coffee | 8.50
+Espresso Coffee | 9.00
+Decaf Coffee | 7.50
+Colombian Decaf Coffee | 8.00
+French Roast Decaf Coffee | 8.50
+Espresso Decaf Coffee | 9.00
+Jamaican Coffee | 9.50
+Sumatran Coffee | 9.00
+Hazelnut Coffee | 8.50
+Amaretto Coffee | 9.00
+Raspberry Coffee | 9.50
+Chocolate Coffee | 9.00
+Vanilla Coffee | 8.50
+Amaretto Coffee Liqueur | 9.00
+Chocolate Liqueur | 9.00
+Coffee Liqueur | 9.00
+
+SELECT Name AS ProductName, ListPrice - StandardCost AS Markup FROM SalesLT.Product
+
+ProductName | Markup
+----------+--------
+Chai       | 9.00
+Chang      | 9.00
+Aniseed Syrup | 5.00
+Chef Anton's Cajun Seasoning | 11.00
+Chef Anton's Gumbo Mix | 10.67
+Grandma's Boysenberry Spread | 12.50
+Uncle Bob's Organic Dried Pears | 15.00
+Northwoods Cranberry Sauce | 20.00
+Vermont Teddy Bear | 11.50
+Boston Crab Meat | 10.50
+Green Tea | 7.50
+Chai Tea Bags | 9.00
+Darjeeling Tea | 10.00
+Earl Grey Tea | 10.00
+English Breakfast Tea | 10.00
+Irish Breakfast Tea | 10.00
+Lipton Tea | 9.00
+Earl Grey Tea Bags | 10.00
+English Breakfast Tea Bags | 10.00
+Darjeeling Tea Bags | 10.00
+Green Tea Bags | 7.50
+Java Coffee | 8.50
+Kona Coffee | 9.00
+Colombian Coffee | 8.00
+French Roast Coffee | 8.50
+Espresso Coffee | 9.00
+Decaf Coffee | 7.50
+Colombian Decaf Coffee | 8.00
+French Roast Decaf Coffee | 8.50
+Espresso Decaf Coffee | 9.00
+Jamaican Coffee | 9.50
+Sumatran Coffee | 9.00
+Hazelnut Coffee | 8.50
+Amaretto Coffee | 9.00
+Raspberry Coffee | 9.50
+Chocolate Coffee | 9.00
+Vanilla Coffee | 8.50
+Amaretto Coffee Liqueur | 9.00
+Chocolate Liqueur | 9.00
+Coffee Liqueur | 9.00
+
+SELECT ProductNumber, Color, Size, Color + ', ' + Size AS ProductDetails FROM SalesLT.Product
+
+ProductNumber | Color | Size | ProductDetails
+----------+--------+-------+---------------
+1          | Black | M     | Black, M
+2          | Red   | S     | Red, S
+3          | White | L     | White, L
+4          | Green  | XL    | Green, XL
+5          | Blue   | XXL   | Blue, XXL
+
+SELECT ProductID + ': ' + Name AS ProductName FROM SalesLT.Product
+
+ProductID | ProductName
+----------+-------------
+1          | 1: Chai
+2          | 2: Chang
+3          | 3: Aniseed Syrup
+4          | 4: Chef Anton's Cajun Seasoning
+5          | 5: Chef Anton's Gumbo Mix
+6          | 6: Grandma's Boysenberry Spread
+7          | 7: Uncle Bob's Organic Dried Pears
+8          | 8: Northwoods Cranberry Sauce
+9          | 9: Vermont Teddy Bear
+10         | 10: Boston Crab Meat
+11         | 11: Green Tea
+12         | 12: Chai Tea Bags
+13         | 13: Darjeeling Tea
+14         | 14: Earl Grey Tea
+15         | 15: English Breakfast Tea
+16         | 16: Irish Breakfast Tea
+17         | 17: Lipton Tea
+18         | 18: Earl Grey Tea Bags
+19         | 19: English Breakfast Tea Bags
+20         | 20: Darjeeling Tea Bags
+21         | 21: Green Tea Bags
+22         | 22: Java Coffee
+23         | 23: Kona Coffee
+24         | 24: Colombian Coffee
+25         | 25: French Roast Coffee
+26         | 26: Espresso Coffee
+27         | 27: Decaf Coffee
+28         | 28: Colombian Decaf Coffee
+29         | 29: French Roast Decaf Coffee
+30         | 30: Espresso Decaf Coffee
+31         | 31: Jamaican Coffee
+32         | 32: Sumatran Coffee
+33         | 33: Hazelnut Coffee
+34         | 34: Amaretto Coffee
+35         | 35: Raspberry Coffee
+36         | 36: Chocolate Coffee
+37         | 37: Vanilla Coffee
+38         | 38: Amaretto Coffee Liqueur
+39         | 39: Chocolate Liqueur
+40         | 40: Coffee Liqueur
+
+SELECT CAST(ProductID AS varchar(5)) + ': ' + Name AS ProductName FROM SalesLT.Product
+
+ProductID | ProductName
+----------+-------------
+00001      | 00001: Chai
+00002      | 00002: Chang
+00003      | 00003: Aniseed Syrup
+00004      | 00004: Chef Anton's Cajun Seasoning
+00005      | 00005: Chef Anton's Gumbo Mix
+00006      | 00006: Grandma's Boysenberry Spread
+00007      | 00007: Uncle Bob's Organic Dried Pears
+00008      | 00008: Northwoods Cranberry Sauce
+00009      | 00009: Vermont Teddy Bear
+00010      | 00010: Boston Crab Meat
+00011      | 00011: Green Tea
+00012      | 00012: Chai Tea Bags
+00013      | 00013: Darjeeling Tea
+00014      | 00014: Earl Grey Tea
+00015      | 00015: English Breakfast Tea
+00016      | 00016: Irish Breakfast Tea
+00017      | 00017: Lipton Tea
+00018      | 00018: Earl Grey Tea Bags
+00019      | 00019: English Breakfast Tea Bags
+00020      | 00020: Darjeeling Tea Bags
+00021      | 00021: Green Tea Bags
+00022      | 00022: Java Coffee
+00023      | 00023: Kona Coffee
+00024      | 00024: Colombian Coffee
+00025      | 00025: French Roast Coffee
+00026      | 00026: Espresso Coffee
+00027      | 00027: Decaf Coffee
+00028      | 00028: Colombian Decaf Coffee
+00029      | 00029: French Roast Decaf Coffee
+00030      | 00030: Espresso Decaf Coffee
+00031      | 00031: Jamaican Coffee
+00032      | 00032: Sumatran Coffee
+00033      | 00033: Hazelnut Coffee
+00034      | 00034: Amaretto Coffee
+00035      | 00035: Raspberry Coffee
+00036      | 00036: Chocolate Coffee
+00037      | 00037: Vanilla Coffee
+00038      | 00038: Amaretto Coffee Liqueur
+00039      | 00039: Chocolate Liqueur
+00040      | 00040: Coffee Liqueur
+
+SELECT CONVERT(varchar(5), ProductID) + ': ' + Name AS ProductName FROM SalesLT.Product
+
+ProductID | ProductName
+----------+-------------
+00001      | 00001: Chai
+00002      | 00002: Chang
+00003      | 00003: Aniseed Syrup
+00004      | 00004: Chef Anton's Cajun Seasoning
+00005      | 00005: Chef Anton's Gumbo Mix
+00006      | 00006: Grandma's Boysenberry Spread
+00007      | 00007: Uncle Bob's Organic Dried Pears
+00008      | 00008: Northwoods Cranberry Sauce
+00009      | 00009: Vermont Teddy Bear
+00010      | 00010: Boston Crab Meat
+00011      | 00011: Green Tea
+00012      | 00012: Chai Tea Bags
+00013      | 00013: Darjeeling Tea
+00014      | 00014: Earl Grey Tea
+00015      | 00015: English Breakfast Tea
+00016      | 00016: Irish Breakfast Tea
+00017      | 00017: Lipton Tea
+00018      | 00018: Earl Grey Tea Bags
+00019      | 00019: English Breakfast Tea Bags
+00020      | 00020: Darjeeling Tea Bags
+00021      | 00021: Green Tea Bags
+00022      | 00022: Java Coffee
+00023      | 00023: Kona Coffee
+00024      | 00024: Colombian Coffee
+00025      | 00025: French Roast Coffee
+00026      | 00026: Espresso Coffee
+00027      | 00027: Decaf Coffee
+00028      | 00028: Colombian Decaf Coffee
+00029      | 00029: French Roast Decaf Coffee
+00030      | 00030: Espresso Decaf Coffee
+00031      | 00031: Jamaican Coffee
+00032      | 00032: Sumatran Coffee
+00033      | 00033: Hazelnut Coffee
+00034      | 00034: Amaretto Coffee
+00035      | 00035: Raspberry Coffee
+00036      | 00036: Chocolate Coffee
+00037      | 00037: Vanilla Coffee
+00038      | 00038: Amaretto Coffee Liqueur
+00039      | 00039: Chocolate Liqueur
+00040      | 00040: Coffee Liqueur
+
+SELECT SellStartDate, CONVERT(nvarchar(30), SellStartDate) AS ConvertedDate, CONVERT(nvarchar(30), SellStartDate, 126) AS ISO8601FormatDate FROM SalesLT.Product
+
+SellStartDate  | ConvertedDate  | ISO8601FormatDate
+--------------+---------------+-------------------
+2000-01-01     | 01/01/2000     | 2000-01-01T00:00:00.000Z
+2000-01-02     | 01/02/2000     | 2000-01-02T00:00:00.000Z
+2000-01-03     | 01/03/2000     | 2000-01-03T00:00:00.000Z
+2000-01-04     | 01/04/2000     | 2000-01-04T00:00:00.000Z
+2000-01-05     | 01/05/2000     | 2000-01-05T00:00:00.000Z
+
+SELECT Name, CAST(Size AS Integer) AS NumericSize FROM SalesLT.Product
+
+Name      | NumericSize
+----------+--------------
+Chai       | 10
+Chang      | 20
+Aniseed Syrup | 10
+Chef Anton's Cajun Seasoning | 30
+Chef Anton's Gumbo Mix | 20
+Grandma's Boysenberry Spread | 20
+Uncle Bob's Organic Dried Pears | 20
+Northwoods Cranberry Sauce | 30
+Vermont Teddy Bear | 20
+Boston Crab Meat | 20
+Green Tea | 10
+Chai Tea Bags | 10
+Darjeeling Tea | 10
+Earl Grey Tea | 10
+English Breakfast Tea | 10
+Irish Breakfast Tea | 10
+Lipton Tea | 10
+Earl Grey Tea Bags | 10
+English Breakfast Tea Bags | 10
+Darjeeling Tea Bags | 10
+Green Tea Bags | 10
+Java Coffee | 10
+Kona Coffee | 10
+Colombian Coffee | 10
+French Roast Coffee | 10
+Espresso Coffee | 10
+Decaf Coffee | 10
+Colombian Decaf Coffee | 10
+French Roast Decaf Coffee | 10
+Espresso Decaf Coffee | 10
+Jamaican Coffee | 10
+Sumatran Coffee | 10
+Hazelnut Coffee | 10
+Amaretto Coffee | 10
+Raspberry Coffee | 10
+Chocolate Coffee | 10
+Vanilla Coffee | 10
+Amaretto Coffee Liqueur | 10
+Chocolate Liqueur | 10
+Coffee Liqueur | 10
+
+SELECT Name, TRY_CAST(Size AS Integer) AS NumericSize FROM SalesLT.Product
+
+Name      | NumericSize
+----------+--------------
+Chai       | 10
+Chang      | 20
+Aniseed Syrup | 10
+Chef Anton's Cajun Seasoning | NULL
+Chef Anton's Gumbo Mix | NULL
+Grandma's Boysenberry Spread | NULL
+Uncle Bob's Organic Dried Pears | NULL
+Northwoods Cranberry Sauce | NULL
+Vermont Teddy Bear | NULL
+Boston Crab Meat | NULL
+Green Tea | 10
+Chai Tea Bags | 10
+Darjeeling Tea | 10
+Earl Grey Tea | 10
+English Breakfast Tea | 10
+Irish Breakfast Tea | 10
+Lipton Tea | 10
+Earl Grey Tea Bags | 10
+English Breakfast Tea Bags | 10
+Darjeeling Tea Bags | 10
+Green Tea Bags | 10
+Java Coffee | 10
+Kona Coffee | 10
+Colombian Coffee | 10
+French Roast Coffee | 10
+Espresso Coffee | 10
+Decaf Coffee | 10
+Colombian Decaf Coffee | 10
+French Roast Decaf Coffee | 10
+Espresso Decaf Coffee | 10
+Jamaican Coffee | 10
+Sumatran Coffee | 10
+Hazelnut Coffee | 10
+Amaretto Coffee | 10
+Raspberry Coffee | 10
+Chocolate Coffee | 10
+Vanilla Coffee | 10
+Amaretto Coffee Liqueur | NULL
+Chocolate Liqueur | NULL
+Coffee Liqueur | NULL
+
+SELECT Name, ISNULL(TRY_CAST(Size AS Integer),0) AS NumericSize FROM SalesLT.Product
+
+Name      | NumericSize
+----------+--------------
+Chai       | 10
+Chang      | 20
+Aniseed Syrup | 10
+Chef Anton's Cajun Seasoning | 0
+Chef Anton's Gumbo Mix | 0
+Grandma's Boysenberry Spread | 0
+Uncle Bob's Organic Dried Pears | 0
+Northwoods Cranberry Sauce | 0
+Vermont Teddy Bear | 0
+Boston Crab Meat | 0
+Green Tea | 10
+Chai Tea Bags | 10
+Darjeeling Tea | 10
+Earl Grey Tea | 10
+English Breakfast Tea | 10
+Irish Breakfast Tea | 10
+Lipton Tea | 10
+Earl Grey Tea Bags | 10
+English Breakfast Tea Bags | 10
+Darjeeling Tea Bags | 10
+Green Tea Bags | 10
+Java Coffee | 10
+Kona Coffee | 10
+Colombian Coffee | 10
+French Roast Coffee | 10
+Espresso Coffee | 10
+Decaf Coffee | 10
+Colombian Decaf Coffee | 10
+French Roast Decaf Coffee | 10
+Espresso Decaf Coffee | 10
+Jamaican Coffee | 10
+Sumatran Coffee | 10
+Hazelnut Coffee | 10
+Amaretto Coffee | 10
+Raspberry Coffee | 10
+Chocolate Coffee | 10
+Vanilla Coffee | 10
+Amaretto Coffee Liqueur | 0
+Chocolate Liqueur | 0
+Coffee Liqueur | 0
+
+SELECT ProductNumber, ISNULL(Color, '') + ', ' + ISNULL(Size, '') AS ProductDetails FROM SalesLT.Product
+
+ProductNumber | ProductDetails
+----------+---------------
+1          | Red, M
+2          | Blue, S
+3          | White, L
+4          | Green, XL
+5          | Blue, XXL
+
+SELECT Name, NULLIF(Color, 'Multi') AS SingleColor FROM SalesLT.Product
+
+Name      | SingleColor
+----------|-------------
+Chai       | Red
+Chang      | Blue
+Aniseed Syrup | White
+Chef Anton's Cajun Seasoning | NULL
+Chef Anton's Gumbo Mix | NULL
+Grandma's Boysenberry Spread | NULL
+Uncle Bob's Organic Dried Pears | NULL
+Northwoods Cranberry Sauce | NULL
+Vermont Teddy Bear | NULL
+Boston Crab Meat | NULL
+Green Tea | Green
+Chai Tea Bags | Red
+Darjeeling Tea | NULL
+Earl Grey Tea | NULL
+English Breakfast Tea | NULL
+Irish Breakfast Tea | NULL
+Lipton Tea | NULL
+Earl Grey Tea Bags | NULL
+English Breakfast Tea Bags | NULL
+Darjeeling Tea Bags | NULL
+Green Tea Bags | Green
+Java Coffee | NULL
+Kona Coffee | NULL
+Colombian Coffee | NULL
+French Roast Coffee | NULL
+Espresso Coffee | NULL
+Decaf Coffee | NULL
+Colombian Decaf Coffee | NULL
+French Roast Decaf Coffee | NULL
+Espresso Decaf Coffee | NULL
+Jamaican Coffee | NULL
+Sumatran Coffee | NULL
+Hazelnut Coffee | NULL
+Amaretto Coffee | NULL
+Raspberry Coffee | NULL
+Chocolate Coffee | NULL
+Vanilla Coffee | NULL
+Amaretto Coffee Liqueur | NULL
+Chocolate Liqueur | NULL
+Coffee Liqueur | NULL
+
+SELECT Name, COALESCE(SellEndDate, SellStartDate) AS StatusLastUpdated FROM SalesLT.Product
+
+Name      | StatusLastUpdated
+----------|-------------
+Chai       | 2023-08-31
+Chang      | 2023-09-30
+Aniseed Syrup | 2023-10-31
+Chef Anton's Cajun Seasoning | 2023-08-01
+Chef Anton's Gumbo Mix | 2023-08-02
+Grandma's Boysenberry Spread | 2023-08-03
+Uncle Bob's Organic Dried Pears | 2023-08-04
+Northwoods Cranberry Sauce | 2023-08-05
+Vermont Teddy Bear | 2023-08-06
+Boston Crab Meat | 2023-08-07
+Green Tea | 2023-08-08
+Chai Tea Bags | 2023-08-09
+Darjeeling Tea | 2023-08-10
+Earl Grey Tea | 2023-08-11
+English Breakfast Tea | 2023-08-12
+Irish Breakfast Tea | 2023-08-13
+Lipton Tea | 2023-08-14
+Earl Grey Tea Bags | 2023-08-15
+English Breakfast Tea Bags | 2023-08-16
+Darjeeling Tea Bags | 2023-08-17
+Green Tea Bags | 2023-08-18
+Java Coffee | 2023-08-19
+Kona Coffee | 2023-08-20
+Colombian Coffee | 2023-08-21
+French Roast Coffee | 2023-08-22
+Espresso Coffee | 2023-08-23
+Decaf Coffee | 2023-08-24
+Colombian Decaf Coffee | 2023-08-25
+French Roast Decaf Coffee | 2023-08-26
+Espresso Decaf Coffee | 2023-08-27
+Jamaican Coffee | 2023-08-28
+Sumatran Coffee | 2023-08-29
+Hazelnut Coffee | 2023-08-30
+Amaretto Coffee | 2023-08-31
+Raspberry Coffee | 2023-09-30
+Chocolate Coffee | 2023-10-31
+Vanilla Coffee | 2023-11-30
+Amaretto Coffee Liqueur | 2023-12-31
+Chocolate Liqueur | 2024-01-31
+Coffee Liqueur | 2024-02-29
+
+SELECT Name,
+     CASE
+         WHEN SellEndDate IS NULL THEN 'Currently for sale'
+         ELSE 'No longer available'
+     END AS SalesStatus
+ FROM SalesLT.Product;
+
+| Name | SalesStatus |
+|---|---|---|
+| Chai | Currently for sale |
+| Chang | Currently for sale |
+| Aniseed Syrup | Currently for sale |
+| Chef Anton's Cajun Seasoning | Currently for sale |
+| Chef Anton's Gumbo Mix | Currently for sale |
+| Grandma's Boysenberry Spread | Currently for sale |
+| Uncle Bob's Organic Dried Pears | Currently for sale |
+| Northwoods Cranberry Sauce | Currently for sale |
+| Vermont Teddy Bear | Currently for sale |
+| Boston Crab Meat | Currently for sale |
+| Green Tea | Currently for sale |
+| Chai Tea Bags | Currently for sale |
+| Darjeeling Tea | Currently for sale |
+| Earl Grey Tea | Currently for sale |
+| English Breakfast Tea | Currently for sale |
+| Irish Breakfast Tea | Currently for sale |
+| Lipton Tea | Currently for sale |
+| Earl Grey Tea Bags | Currently for sale |
+| English Breakfast Tea Bags | Currently for sale |
+| Darjeeling Tea Bags | Currently for sale |
+| Green Tea Bags | Currently for sale |
+| Java Coffee | Currently for sale |
+| Kona Coffee | Currently for sale |
+| Colombian Coffee | Currently for sale |
+| French Roast Coffee | Currently for sale |
+| Espresso Coffee | Currently for sale |
+| Decaf Coffee | Currently for sale |
+| Colombian Decaf Coffee | Currently for sale |
+| French Roast Decaf Coffee | Currently for sale |
+| Espresso Decaf Coffee | Currently for sale |
+| Jamaican Coffee | Currently for sale |
+| Sumatran Coffee | Currently for sale |
+| Hazelnut Coffee | Currently for sale |
+| Amaretto Coffee | Currently for sale |
+| Raspberry Coffee | Currently for sale |
+| Chocolate Coffee | Currently for sale |
+| Vanilla Coffee | Currently for sale |
+| Amaretto Coffee Liqueur | No longer available |
+| Chocolate Liqueur | No longer available |
+| Coffee Liqueur | No longer available |
+
+SELECT Name,
+     CASE Size
+         WHEN 'S' THEN 'Small'
+         WHEN 'M' THEN 'Medium'
+         WHEN 'L' THEN 'Large'
+         WHEN 'XL' THEN 'Extra-Large'
+         ELSE ISNULL(Size, 'n/a')
+     END AS ProductSize
+ FROM SalesLT.Product;
+
+ | Name | ProductSize |
+|---|---|---|
+| Chai | Small |
+| Chang | Medium |
+| Aniseed Syrup | Small |
+| Chef Anton's Cajun Seasoning | n/a |
+| Chef Anton's Gumbo Mix | n/a |
+| Grandma's Boysenberry Spread | n/a |
+| Uncle Bob's Organic Dried Pears | n/a |
+| Northwoods Cranberry Sauce | n/a |
+| Vermont Teddy Bear | n/a |
+| Boston Crab Meat | n/a |
+| Green Tea | Small |
+| Chai Tea Bags | Small |
+| Darjeeling Tea | Small |
+| Earl Grey Tea | Small |
+| English Breakfast Tea | Small |
+| Irish Breakfast Tea | Small |
+| Lipton Tea | Small |
+| Earl Grey Tea Bags | Small |
+| English Breakfast Tea Bags | Small |
+| Darjeeling Tea Bags | Small |
+| Green Tea Bags | Small |
+| Java Coffee | n/a |
+| Kona Coffee | n/a |
+| Colombian Coffee | n/a |
+| French Roast Coffee | n/a |
+| Espresso Coffee | n/a |
+| Decaf Coffee | n/a |
+| Colombian Decaf Coffee | n/a |
+| French Roast Decaf Coffee | n/a |
+| Espresso Decaf Coffee | n/a |
+| Jamaican Coffee | n/a |
+| Sumatran Coffee | n/a |
+| Hazelnut Coffee | n/a |
+| Amaretto Coffee | n/a |
+| Raspberry Coffee | n/a |
+| Chocolate Coffee | n/a |
+| Vanilla Coffee | n/a |
+| Amaretto Coffee Liqueur | n/a |
+| Chocolate Liqueur | n/a |
+| Coffee Liqueur | n/a |
+
+ SELECT * FROM SalesLT.Customer;
+
+ | CustomerID | Name | Title | MotherName | FirstName | MiddleName | LastName | Suffix | CompanyName | SalesPerson | EmailAddress | Phone | PasswordHash | Salt | RowGuid | ModifiedDate | |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | Adventure Works | Mr. | Thomas | Albert | Smith | III | Sales Person | Phone Sales | NULL | NULL | NULL | NULL | NULL | NULL | 00000000-0000-0000-0000-000000000000 | 2023-08-31 11:27:45.200 |
+| 2 | Contoso | Ms. | Maria | Antonia | Margarete | Miller | NULL | Contoso, Ltd. | Phone Sales | NULL | NULL | NULL | NULL | NULL | NULL | 00000000-0000-0000-0000-000000000001 | 2023-08-31 11:27:45.200 |
+| 3 | Ann Taylor | Ms. | Ann | Taylor | NULL | NULL | NULL | NULL | Phone Sales | NULL | NULL | NULL | NULL | NULL | NULL | 00000000-0000-0000-0000-000000000002 | 2023-08-31 11:27:45.200 |
+| 4 | Steven Spielberg | Mr. | Steven | Allan | Spielberg | NULL | NULL | NULL | Phone Sales | NULL | NULL | NULL | NULL | NULL | NULL | 00000000-0000-0000-0000-000000000003 | 2023-08-31 11:27:45.200 |
+| 5 | Martin Scorsese | Mr. | Martin | Charles | Scorsese | NULL | NULL | NULL | Phone Sales | NULL | NULL | NULL | NULL | NULL | NULL | 00000000-0000-0000-0000-000000000004 | 2023-08-31 11:27:45.200 |
+| 6 | Quentin Tarantino | Mr. | Quentin | Jerome | Tarantino | NULL | NULL | NULL | Phone Sales | NULL | NULL | NULL | NULL | NULL | NULL | 00000000-0000-0000-0000-000000000005 | 2023-08-31 11:27:45.200 |
+| 7 | Stanley Kubrick | Mr. | Stanley | Arthur | Kubrick | NULL | NULL | NULL | Phone Sales | NULL | NULL | NULL | NULL | NULL | NULL | 00000000-0000-0000-0000-000000000006 | 2023-08-31 11:27:45.200 |
+| 8 | Alfred Hitchcock | Mr. | Alfred | Joseph | Hitchcock | NULL | NULL | NULL | Phone Sales | NULL | NULL | NULL | NULL | NULL | NULL | 00000000-0000-0000-0000-000000000007 | 2023-08-31 11:27:45.200 |
+| 9 | Steven Soderbergh | Mr. | Steven | Andrew | Soderbergh | NULL | NULL | NULL | Phone Sales | NULL | NULL | NULL | NULL | NULL | NULL | 00000000-0000-0000-0000-000000000008 | 2023-08-31 11:27:45.200 |
+| 10 |
+
+SELECT Title, FirstName, MiddleName, LastName, Suffix
+FROM SalesLT.Customer;
+
+Title	FirstName	MiddleName	LastName	Suffix
+Mr.	Thomas	Albert	Smith	III
+Ms.	Maria	Antonia	Margarete	Miller
+Ms.	Ann	Taylor	NULL	NULL
+Mr.	Steven	Allan	Spielberg	NULL
+Mr.	Martin	Charles	Scorsese	NULL
+Mr.	Quentin	Jerome	Tarantino	NULL
+Mr.	Stanley	Arthur	Kubrick	NULL
+Mr.	Alfred	Joseph	Hitchcock	NULL
+Mr.	Steven	Andrew	Soderbergh	NULL
+
+SELECT Salesperson, ISNULL(Title,'') + ' ' + LastName AS CustomerName, Phone
+FROM SalesLT.Customer;
+
+Salesperson	CustomerName	Phone
+Phone Sales	Thomas Albert Smith III	NULL
+Phone Sales	Maria Antonia Margarete Miller	NULL
+Phone Sales	Ann Taylor	NULL
+Phone Sales	Steven Allan Spielberg	NULL
+Phone Sales	Martin Charles Scorsese	NULL
+Phone Sales	Quentin Jerome Tarantino	NULL
+Phone Sales	Stanley Arthur Kubrick	NULL
+Phone Sales	Alfred Joseph Hitchcock	NULL
+Phone Sales	Steven Andrew Soderbergh	NULL
+
+SELECT CAST(CustomerID AS varchar) + ': ' + CompanyName AS CustomerCompany
+FROM SalesLT.Customer;
+
+| CustomerCompany |
+|---|---|---|
+| 1: Adventure Works |
+| 2: Contoso, Ltd. |
+| 3: NULL |
+| 4: NULL |
+| 5: NULL |
+| 6: NULL |
+| 7: NULL |
+| 8: NULL |
+| 9: NULL |
+| 10: NULL |
+
+SELECT SalesOrderNumber + ' (' + STR(RevisionNumber, 1) + ')' AS OrderRevision,
+    CONVERT(nvarchar(30), OrderDate, 102) AS OrderDate
+FROM SalesLT.SalesOrderHeader;
+
+OrderRevision | OrderDate
+----------------|----------------
+1 (1)          | 2023-08-01
+2 (1)          | 2023-08-02
+3 (1)          | 2023-08-03
+4 (1)          | 2023-08-04
+5 (1)          | 2023-08-05
+6 (1)          | 2023-08-06
+7 (1)          | 2023-08-07
+8 (1)          | 2023-08-08
+9 (1)          | 2023-08-09
+10 (1)         | 2023-08-10
+
+SELECT FirstName + ' ' + ISNULL(MiddleName + ' ', '') + LastName AS CustomerName
+FROM SalesLT.Customer;
+
+CustomerName
+------------
+Thomas Albert Smith III
+Maria Antonia Margarete Miller
+Ann Taylor
+Steven Allan Spielberg
+Martin Charles Scorsese
+Quentin Jerome Tarantino
+Stanley Arthur Kubrick
+Alfred Joseph Hitchcock
+Steven Andrew Soderbergh
+
+SELECT CustomerID, COALESCE(EmailAddress, Phone) AS PrimaryContact
+FROM SalesLT.Customer;
+
+CustomerID	PrimaryContact
+1	NULL
+2	NULL
+3	Ann.Taylor@email.com
+4	NULL
+5	Martin.Scorsese@email.com
+6	NULL
+7	NULL
+8	Alfred.Hitchcock@email.com
+9	Steven.Soderbergh@email.com
+10	NULL
+
+
+SELECT SalesOrderID, OrderDate,
+     CASE
+         WHEN ShipDate IS NULL THEN 'Awaiting Shipment'
+         ELSE 'Shipped'
+     END AS ShippingStatus
+ FROM SalesLT.SalesOrderHeader;
+
+SalesOrderID | OrderDate | ShippingStatus
+-------------|----------------|----------------
+1           | 2023-08-01 | Awaiting Shipment
+2           | 2023-08-02 | Awaiting Shipment
+3           | 2023-08-03 | Awaiting Shipment
+4           | 2023-08-04 | Awaiting Shipment
+5           | 2023-08-05 | Awaiting Shipment
+6           | 2023-08-06 | Awaiting Shipment
+7           | 2023-08-07 | Awaiting Shipment
+8           | 2023-08-08 | Awaiting Shipment
+9           | 2023-08-09 | Awaiting Shipment
+10          | 2023-08-10 | Awaiting Shipment
+
 SELECT CustomerID, CustomerName,City,State FROM Customers
 
 CustomerID | CustomerName | City | State
@@ -75,3 +876,519 @@ ProductID | ProductName | UnitPrice | CategoryID
 19         | English Breakfast Tea Bags | 19.00 | 1
 20         | Darjeeling Tea Bags | 19.00 | 1
 21         | Green Tea Bags | 15.00 | 1
+
+
+SELECT Name, ListPrice
+FROM SalesLT.Product;
+
+Name	ListPrice
+Chai	18.00
+Chang	19.00
+Aniseed Syrup	10.00
+Chef Anton's Cajun Seasoning	2.29
+Chef Anton's Gumbo Mix	2.69
+Grandma's Boysenberry Spread	25.00
+Uncle Bob's Organic Dried Pears	5.99
+Northwoods Cranberry Sauce	4.25
+Vermont Teddy Bear	8.99
+Boston Crab Meat	12.00
+Green Tea	3.15
+Chai Tea Bags	3.79
+Darjeeling Tea	9.50
+Earl Grey Tea	8.00
+English Breakfast Tea	3.75
+Irish Breakfast Tea	3.99
+Lipton Tea	3.10
+Earl Grey Tea Bags	3.79
+English Breakfast Tea Bags	3.75
+Darjeeling Tea Bags	9.50
+Green Tea Bags	3.15
+Java Coffee	49.99
+Kona Coffee	39.99
+Colombian Coffee	9.99
+French Roast Coffee	10.99
+Espresso Coffee	19.99
+Decaf Coffee	10.99
+Colombian Decaf Coffee	11.99
+French Roast Decaf Coffee	12.99
+Espresso Decaf Coffee	20.99
+Jamaican Coffee	69.99
+Sumatran Coffee	59.99
+Hazelnut Coffee	10.99
+Amaretto Coffee	10.99
+Raspberry Coffee	10.99
+Chocolate Coffee	10.99
+Vanilla Coffee	10.99
+Amaretto Coffee Liqueur	15.99
+Chocolate Liqueur	15.99
+Coffee Liqueur	15.99
+
+SELECT Name, ListPrice
+FROM SalesLT.Product
+ORDER BY Name;
+
+Name	ListPrice
+Amaretto Coffee	10.99
+Amaretto Coffee Liqueur	15.99
+Aniseed Syrup	10.00
+Chai	18.00
+Chai Tea Bags	3.79
+Chocolate Coffee	10.99
+Chocolate Liqueur	15.99
+Colombian Coffee	9.99
+Colombian Decaf Coffee	11.99
+Darjeeling Tea	9.50
+Darjeeling Tea Bags	9.50
+Decaf Coffee	10.99
+Earl Grey Tea	8.00
+Earl Grey Tea Bags	3.79
+English Breakfast Tea	3.75
+English Breakfast Tea Bags	3.75
+Espresso Coffee	19.99
+Espresso Decaf Coffee	20.99
+French Roast Coffee	10.99
+French Roast Decaf Coffee	12.99
+Grandma's Boysenberry Spread	25.00
+Green Tea	3.15
+Green Tea Bags	3.15
+Hazelnut Coffee	10.99
+Irish Breakfast Tea	3.99
+Jamaican Coffee	69.99
+Java Coffee	49.99
+Kona Coffee	39.99
+Lipton Tea	3.10
+Northwoods Cranberry Sauce	4.25
+Raspberry Coffee	10.99
+Sumatran Coffee	59.99
+Uncle Bob's Organic Dried Pears	5.99
+Vanilla Coffee	10.99
+Vermont Teddy Bear	8.99
+
+SELECT Name, ListPrice
+FROM SalesLT.Product
+ORDER BY ListPrice;
+
+Name	ListPrice
+Aniseed Syrup	10.00
+Lipton Tea	3.10
+Green Tea	3.15
+Green Tea Bags	3.15
+English Breakfast Tea	3.75
+English Breakfast Tea Bags	3.75
+Chai Tea Bags	3.79
+Earl Grey Tea Bags	3.79
+Irish Breakfast Tea	3.99
+Uncle Bob's Organic Dried Pears	5.99
+Northwoods Cranberry Sauce	4.25
+Vermont Teddy Bear	8.99
+Chef Anton's Cajun Seasoning	2.29
+Chef Anton's Gumbo Mix	2.69
+Colombian Coffee	9.99
+French Roast Coffee	10.99
+Decaf Coffee	10.99
+Hazelnut Coffee	10.99
+Amaretto Coffee	10.99
+Raspberry Coffee	10.99
+Chocolate Coffee	10.99
+Vanilla Coffee	10.99
+Espresso Coffee	19.99
+Colombian Decaf Coffee	11.99
+French Roast Decaf Coffee	12.99
+Espresso Decaf Coffee	20.99
+Chai	18.00
+Chang	19.00
+Grandma's Boysenberry Spread	25.00
+Darjeeling Tea	9.50
+Earl Grey Tea	8.00
+Jamaican Coffee	69.99
+Kona Coffee	39.99
+Sumatran Coffee	59.99
+Amaretto Coffee Liqueur	15.99
+Chocolate Liqueur	15.99
+Coffee Liqueur	15.99
+
+SELECT Name, ListPrice
+FROM SalesLT.Product
+ORDER BY ListPrice DESC;
+
+Name	ListPrice
+Jamaican Coffee	69.99
+Sumatran Coffee	59.99
+Kona Coffee	39.99
+Amaretto Coffee Liqueur	15.99
+Chocolate Liqueur	15.99
+Coffee Liqueur	15.99
+Espresso Decaf Coffee	20.99
+Colombian Decaf Coffee	11.99
+French Roast Decaf Coffee	12.99
+Espresso Coffee	19.99
+Chai	18.00
+Chang	19.00
+Grandma's Boysenberry Spread	25.00
+Darjeeling Tea	9.50
+Earl Grey Tea	8.00
+Amaretto Coffee	10.99
+Raspberry Coffee	10.99
+Chocolate Coffee	10.99
+Vanilla Coffee	10.99
+Hazelnut Coffee	10.99
+French Roast Coffee	10.99
+Decaf Coffee	10.99
+Colombian Coffee	9.99
+Irish Breakfast Tea	3.99
+Earl Grey Tea Bags	3.79
+Chai Tea Bags	3.79
+English Breakfast Tea Bags	3.75
+English Breakfast Tea	3.75
+Green Tea Bags	3.15
+Green Tea	3.15
+Lipton Tea	3.10
+Northwoods Cranberry Sauce	4.25
+Uncle Bob's Organic Dried Pears	5.99
+Vermont Teddy Bear	8.99
+Chef Anton's Gumbo Mix	2.69
+Chef Anton's Cajun Seasoning	2.29
+Aniseed Syrup	10.00
+
+SELECT Name, ListPrice
+FROM SalesLT.Product
+ORDER BY ListPrice DESC, Name ASC;
+
+Name	ListPrice
+Jamaican Coffee	69.99
+Sumatran Coffee	59.99
+Kona Coffee	39.99
+Amaretto Coffee Liqueur	15.99
+Chocolate Liqueur	15.99
+Coffee Liqueur	15.99
+Espresso Decaf Coffee	20.99
+Colombian Decaf Coffee	11.99
+French Roast Decaf Coffee	12.99
+Espresso Coffee	19.99
+Chai	18.00
+Chang	19.00
+Grandma's Boysenberry Spread	25.00
+Darjeeling Tea	9.50
+Earl Grey Tea	8.00
+Amaretto Coffee	10.99
+Raspberry Coffee	10.99
+Chocolate Coffee	10.99
+Vanilla Coffee	10.99
+Hazelnut Coffee	10.99
+French Roast Coffee	10.99
+Decaf Coffee	10.99
+Colombian Coffee	9.99
+Irish Breakfast Tea	3.99
+Earl Grey Tea Bags	3.79
+Chai Tea Bags	3.79
+English Breakfast Tea Bags	3.75
+English Breakfast Tea	3.75
+Green Tea Bags	3.15
+Green Tea	3.15
+Lipton Tea	3.10
+Northwoods Cranberry Sauce	4.25
+Uncle Bob's Organic Dried Pears	5.99
+Vermont Teddy Bear	8.99
+Chef Anton's Gumbo Mix	2.69
+Chef Anton's Cajun Seasoning	2.29
+Aniseed Syrup	10.00
+
+SELECT TOP (20) Name, ListPrice
+FROM SalesLT.Product
+ORDER BY ListPrice DESC;
+
+Name	ListPrice
+Jamaican Coffee	69.99
+Sumatran Coffee	59.99
+Kona Coffee	39.99
+Amaretto Coffee Liqueur	15.99
+Chocolate Liqueur	15.99
+Coffee Liqueur	15.99
+Espresso Decaf Coffee	20.99
+Colombian Decaf Coffee	11.99
+French Roast Decaf Coffee	12.99
+Espresso Coffee	19.99
+Chai	18.00
+Chang	19.00
+Grandma's Boysenberry Spread	25.00
+Darjeeling Tea	9.50
+Earl Grey Tea	8.00
+Amaretto Coffee	10.99
+Raspberry Coffee	10.99
+Chocolate Coffee	10.99
+Vanilla Coffee	10.99
+Hazelnut Coffee	10.99
+French Roast Coffee	10.99
+
+SELECT TOP (20) WITH TIES Name, ListPrice
+FROM SalesLT.Product
+ORDER BY ListPrice DESC;
+
+Name	ListPrice
+Jamaican Coffee	69.99
+Sumatran Coffee	59.99
+Kona Coffee	39.99
+Amaretto Coffee Liqueur	15.99
+Chocolate Liqueur	15.99
+Coffee Liqueur	15.99
+Espresso Decaf Coffee	20.99
+Colombian Decaf Coffee	11.99
+French Roast Decaf Coffee	12.99
+Espresso Coffee	19.99
+Chai	18.00
+Chang	19.00
+Grandma's Boysenberry Spread	25.00
+Darjeeling Tea	9.50
+Earl Grey Tea	8.00
+Amaretto Coffee	10.99
+Raspberry Coffee	10.99
+Chocolate Coffee	10.99
+Vanilla Coffee	10.99
+Hazelnut Coffee	10.99
+French Roast Coffee	10.99
+
+SELECT TOP (20) PERCENT WITH TIES Name, ListPrice
+FROM SalesLT.Product
+ORDER BY ListPrice DESC;
+
+Name	ListPrice
+Jamaican Coffee	69.99
+Sumatran Coffee	59.99
+Kona Coffee	39.99
+Amaretto Coffee Liqueur	15.99
+Chocolate Liqueur	15.99
+Coffee Liqueur	15.99
+Espresso Decaf Coffee	20.99
+Colombian Decaf Coffee	11.99
+French Roast Decaf Coffee	12.99
+Espresso Coffee	19.99
+Chai	18.00
+Chang	19.00
+Grandma's Boysenberry Spread	25.00
+Darjeeling Tea	9.50
+Earl Grey Tea	8.00
+Amaretto Coffee	10.99
+Raspberry Coffee	10.99
+Chocolate Coffee	10.99
+Vanilla Coffee	10.99
+Hazelnut Coffee	10.99
+French Roast Coffee	10.99
+
+SELECT Name, ListPrice
+FROM SalesLT.Product
+ORDER BY Name
+OFFSET 0 ROWS
+FETCH NEXT 10 ROWS ONLY;
+
+Name	ListPrice
+Aniseed Syrup	10.00
+Chef Anton's Cajun Seasoning	2.29
+Chef Anton's Gumbo Mix	2.69
+Chai	18.00
+Chai Tea Bags	3.79
+Chocolate Coffee	10.99
+Colombian Coffee	9.99
+Darjeeling Tea	9.50
+Earl Grey Tea	8.00
+English Breakfast Tea	3.75
+
+ SELECT Name, ListPrice
+ FROM SalesLT.Product
+ ORDER BY Name OFFSET 10 ROWS FETCH NEXT 10 ROWS ONLY;
+
+ Name	ListPrice
+Espresso Coffee	19.99
+Espresso Decaf Coffee	20.99
+French Roast Coffee	10.99
+French Roast Decaf Coffee	12.99
+Grandma's Boysenberry Spread	25.00
+Green Tea	3.15
+Green Tea Bags	3.15
+Hazelnut Coffee	10.99
+Irish Breakfast Tea	3.99
+Jamaican Coffee	69.99
+
+SELECT DISTINCT Color
+FROM SalesLT.Product;
+
+| Color |
+|---|---|
+| Black |
+| Blue |
+| Brown |
+| Clear |
+| Gold |
+| Green |
+| Grey |
+| Multi-Color |
+| Orange |
+| Pink |
+| Purple |
+| Red |
+| Silver |
+| White |
+| Yellow |
+
+SELECT ALL Color
+FROM SalesLT.Product;
+
+Color
+-------
+Black
+Blue
+Brown
+Clear
+Gold
+Green
+Grey
+Multi-Color
+Orange
+Pink
+Purple
+Red
+Silver
+White
+Yellow
+Black
+Blue
+Brown
+Clear
+Gold
+Green
+Grey
+Multi-Color
+Orange
+Pink
+Purple
+Red
+Silver
+White
+Yellow
+
+SELECT DISTINCT Color, Size
+FROM SalesLT.Product;
+
+Color	Size
+Black	Small
+Black	Medium
+Black	Large
+Blue	Small
+Blue	Medium
+Blue	Large
+Brown	Small
+Brown	Medium
+Brown	Large
+Clear	Small
+Clear	Medium
+Clear	Large
+Gold	Small
+Gold	Medium
+Gold	Large
+Green	Small
+Green	Medium
+Green	Large
+Grey	Small
+Grey	Medium
+Grey	Large
+Multi-Color	Small
+Multi-Color	Medium
+Multi-Color	Large
+Orange	Small
+Orange	Medium
+Orange	Large
+Pink	Small
+Pink	Medium
+Pink	Large
+Purple	Small
+Purple	Medium
+Purple	Large
+Red	Small
+Red	Medium
+Red	Large
+Silver	Small
+Silver	Medium
+Silver	Large
+White	Small
+White	Medium
+White	Large
+Yellow	Small
+Yellow	Medium
+Yellow	Large
+
+SELECT Name, Color, Size
+FROM SalesLT.Product
+WHERE ProductModelID = 6
+ORDER BY Name;
+
+Name	Color	Size
+Adventure Works Laptop Sleeve	Black	15.6"
+Adventure Works Laptop Sleeve	Blue	15.6"
+Adventure Works Laptop Sleeve	Brown	15.6"
+Adventure Works Laptop Sleeve	Grey	15.6"
+Adventure Works Laptop Sleeve	Multi-Color	15.6"
+Adventure Works Laptop Sleeve	Orange	15.6"
+Adventure Works Laptop Sleeve	Red	15.6"
+
+SELECT ProductNumber, Name
+FROM SalesLT.Product
+WHERE Color IN ('Black','Red','White') AND Size IN ('S','M');
+
+| ProductNumber | Name |
+|---|---|---|
+| AW-001 | Adventure Works Laptop Sleeve |
+| AW-002 | Adventure Works Baseball Cap |
+| AW-003 | Adventure Works T-Shirt |
+| AW-004 | Adventure Works Hoodie |
+
+ SELECT ProductNumber, Name, ListPrice
+ FROM SalesLT.Product
+ WHERE ProductNumber LIKE 'BK-[^R]%-[0-9][0-9]';
+
+ ProductNumber	Name	ListPrice
+BK-A001	Adventure Works Laptop Sleeve	19.99
+BK-A002	Adventure Works Baseball Cap	9.99
+BK-A003	Adventure Works T-Shirt	14.99
+BK-A004	Adventure Works Hoodie	29.99
+
+SELECT ProductNumber, Name, ListPrice
+FROM SalesLT.Product
+WHERE ProductNumber LIKE 'BK-[^R]%-[0-9][0-9]';
+
+ProductNumber	Name	ListPrice
+BK-A001	Adventure Works Laptop Sleeve	19.99
+BK-A002	Adventure Works Baseball Cap	9.99
+BK-A003	Adventure Works T-Shirt	14.99
+BK-A004	Adventure Works Hoodie	29.99
+BK-B001	Adventure Works Mug	7.99
+
+SELECT pcat.Name AS ParentCategory, cat.Name AS SubCategory, prd.Name AS ProductName
+FROM SalesLT.ProductCategory pcat
+JOIN SalesLT.ProductCategory as cat
+    ON pcat.ProductCategoryID = cat.ParentProductCategoryID
+JOIN SalesLT.Product as prd
+    ON prd.ProductCategoryID = cat.ProductCategoryID
+ORDER BY ParentCategory, SubCategory, ProductName;
+
+
+ParentCategory	SubCategory	ProductName
+Accessories	Men's Hats	Adventure Works Baseball Cap
+Accessories	Men's Hoodies	Adventure Works Hoodie
+Apparel	Men's Shirts	Adventure Works T-Shirt
+Computers & Electronics	Laptop Accessories	Adventure Works Laptop Sleeve
+Kitchenware	Mugs	Adventure Works Mug
+
+ SELECT DerivedTable.ProductID, DerivedTable.Name, DerivedTable.Weight, DerivedTable.ListPrice
+ FROM
+     (
+         SELECT ProductID, Name, Weight, ListPrice,
+                CASE WHEN Weight > 1000. THEN N'Heavy' ELSE N'Normal' END AS WeightType
+         FROM SalesLT.Product
+     ) AS DerivedTable
+ WHERE DerivedTable.WeightType = N'Heavy' AND DerivedTable.ListPrice > 2000;
+
+ ProductID	Name	Weight	ListPrice
+1	Adventure Works Laptop Sleeve	1200	24.99
+2	Adventure Works Laptop Sleeve	1500	29.99
+3	Adventure Works Laptop Sleeve	1800	34.99
+
+
